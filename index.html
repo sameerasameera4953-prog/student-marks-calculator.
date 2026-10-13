@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="eyebrow">STUDENT TOOL</div>
+      <h1>Student Marks Calculator</h1>
+      <p class="subtitle">Enter marks for five subjects to calculate your result.</p>
+
+      <form id="marksForm">
+        <label for="studentName">Student name</label>
+        <input id="studentName" type="text" placeholder="Enter your name" maxlength="60">
+
+        <div class="subjects">
+          <div class="subject">
+            <label for="maths">Mathematics <span>(out of 100)</span></label>
+            <input id="maths" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="physics">Physics <span>(out of 100)</span></label>
+            <input id="physics" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="chemistry">Chemistry <span>(out of 100)</span></label>
+            <input id="chemistry" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="english">English <span>(out of 100)</span></label>
+            <input id="english" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+          <div class="subject">
+            <label for="computers">Computer Science <span>(out of 100)</span></label>
+            <input id="computers" type="number" min="0" max="100" step="1" placeholder="0–100" required>
+          </div>
+        </div>
+
+        <p id="errorMessage" class="error" role="alert" aria-live="polite"></p>
+        <div class="actions">
+          <button type="submit">Calculate Result</button>
+          <button type="reset" class="secondary">Clear</button>
+        </div>
+      </form>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <h2>Result Summary</h2>
+        <p id="resultName" class="result-name"></p>
+        <div class="stats">
+          <div class="stat"><span>Total Marks</span><strong id="total">0 / 500</strong></div>
+          <div class="stat"><span>Percentage</span><strong id="percentage">0%</strong></div>
+          <div class="stat"><span>Grade</span><strong id="grade">-</strong></div>
+          <div class="stat"><span>Status</span><strong id="status">-</strong></div>
+        </div>
+        <p class="note">Passing rule: at least 35 marks in every subject.</p>
+      </section>
+      <footer>Made with HTML, CSS &amp; JavaScript</footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
